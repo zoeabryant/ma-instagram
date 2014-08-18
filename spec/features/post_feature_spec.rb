@@ -32,6 +32,15 @@ describe 'posts' do
 	  	expect(current_path).to eq '/posts'
 	  end
 
+	  it 'can attach an image to a post' do
+	  	visit '/posts/new'
+	  	fill_in 'Title', with: 'A brand new post'
+	  	attach_file 'Picture', Rails.root.join('spec/images/french_cat.gif')
+	  	click_button 'Create Post'
+
+	  	expect(page).to have_css 'img.uploaded_pic'
+	  end
+
 	end
 
 end

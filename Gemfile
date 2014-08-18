@@ -1,9 +1,12 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
 end
+
+gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
