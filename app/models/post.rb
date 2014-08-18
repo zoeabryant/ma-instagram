@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
 
 	has_attached_file :picture,
 		styles: { medium: "300x300>" },
+		:storage => :s3,
 		:s3_credentials => {
 			:bucket => 'ma-instagram',
 		    :access_key_id => Rails.application.secrets.s3_access_key_id,
