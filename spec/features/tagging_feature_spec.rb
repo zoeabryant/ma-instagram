@@ -26,6 +26,13 @@ describe 'tagging' do
 			expect(page).to have_content 'Post A'
 			expect(page).not_to have_content 'Post B'
 		end
+
+		it 'is accessible by pretty urls' do
+			visit '/tags/pretty'
+
+			expect(page).to have_content 'Post A'
+		end
 	end
+
 
 end
