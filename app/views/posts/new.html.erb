@@ -1,12 +1,22 @@
-<%= form_for @post, html: { multipart: true } do |f| %>
-	<%= f.label :title %>
-	<%= f.text_field :title %>
+<section class="row">
 
-	<%= f.label :picture %>
-	<%= f.file_field :picture %>
+	<article class="col-xs-6">
+	<%= form_for @post, html: { multipart: true } do |f| %>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
 
-	<%= f.label :tag_list, 'Tags' %>
-	<%= f.text_field :tag_list %>
+		<%= f.label :picture %>
+		<%= f.file_field :picture %>
 
-	<%= f.submit 'Create Post' %>
-<% end %>
+		<%= f.label :tag_list, 'Tags' %>
+		<%= f.text_field :tag_list %>
+
+		<%= f.submit 'Create Post' %>
+	<% end %>
+	</article>
+
+	<aside class="photo-area-container col-xs-6">
+		<article id="photo_area"><span class="glyphicon glyphicon-camera"></span></article>
+	</aside>
+
+</section>
