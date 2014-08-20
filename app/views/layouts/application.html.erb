@@ -8,8 +8,28 @@
 </head>
 <body>
 
-<h1 id="logo">Pipster</h1>
-<%= yield %>
+	<header class="global-header container">
+		<a href="<%= posts_path %>" id="logo"><h1>Pipster</h1></a>
+
+		<ul class="global-nav">
+			<li>
+				<%= link_to(new_post_path, class: 'new-post') do %>
+					<span class="glyphicon glyphicon-camera"></span>
+					New Post
+				<% end %>
+			</li>
+		</ul>
+	</header>
+
+	<main class="wrapper container">
+
+		<%= yield %>
+
+		<section class="load">
+			<span class="glyphicon glyphicon-repeat"></span>
+		</section>
+
+	</main>
 
 </body>
 </html>

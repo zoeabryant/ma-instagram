@@ -1,10 +1,14 @@
-<h3><%= post.title %></h3>
-<%= image_tag post.picture.url(:medium), class: "uploaded_pic" %>
+<article class="post col-xs-4">
 
-<% if post.tags.any? %>
-<ul>
-	<% post.tags.each do |tag| %>
-	<li><%= link_to tag.text, tag %></li>
+	<h3><%= post.title %></h3>
+	<%= image_tag post.picture.url(:medium), class: "uploaded_pic" %>
+
+	<% if post.tags.any? %>
+	<ul class="tags">
+		<% post.tags.each do |tag| %>
+		<li><%= link_to tag.text, tag %></li>
+		<% end %>
+	</ul>
 	<% end %>
-</ul>
-<% end %>
+
+</article>

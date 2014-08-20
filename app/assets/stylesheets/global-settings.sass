@@ -1,0 +1,28 @@
+@import "_colors"
+
+ul
+	padding: 0
+	li
+		list-style-type: none
+
+body
+	background: $white
+
+main.wrapper
+	background: $teal
+	padding-top: 30px
+	border-top-left-radius: 20px
+	border-top-right-radius: 20px
+
+.load
+	font-size: 5em
+	text-align: center
+	color: $grey
+	span
+		animation: rotate_full 2s infinite linear
+
+@keyframes rotate_full
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(360deg)

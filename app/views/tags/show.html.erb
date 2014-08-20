@@ -1,3 +1,13 @@
 <h1>Posts tagged with <%= @tag.text %></h1>
 
-<%= render @tag.posts %>
+<% if @tag.posts.any? %>
+	<% @tag.posts.in_groups_of(3, false) do |posts_triplet| %>
+
+	<section class="row">
+		<%= render posts_triplet %>
+	</section>
+
+	<% end %>
+<% else %>
+	<h2>No posts yet</h2>
+<% end %>
