@@ -1,16 +1,20 @@
 <article class="post col-xs-12 col-sm-4">
 
 	<header>
-		<h3><%= post.title %></h3>
+		<h3>
+			<%= post.title %>
+			<small>
+				<%= link_to(post_maps_path(post.id)) do %>
+					<span class="glyphicon glyphicon-map-marker"></span>
+					<%= post.location %>
+				<% end %>
+			</small>
+		</h3>
 	</header>
 
 	<figure>
 		<%= image_tag post.picture.url(:medium), class: "uploaded_pic" %>
 	</figure>
-
-	<figcaption>
-		<%= link_to post.location, post_maps_path(post.id) %>
-	</figcaption>
 
 	<footer>
 

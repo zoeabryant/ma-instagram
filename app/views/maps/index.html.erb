@@ -1,15 +1,25 @@
-<h3><%= @post.title %> posted from <%= @post.location %></h3>
+<section class="row map-page">
+	<header class="col-xs-12">
 
-<section class="row">
+		<h1>
+			<strong><%= @post.title %></strong>
+			<span class="glyphicon glyphicon-map-marker"></span>
+			<%= @post.location %>
+		</h1>
 
-	<article class="col-sm-6">
-		<div id="map" data-id="<%= @post.id %>"></div>
-	</article>
+	</header>
+</section>
 
-	<article class="col-sm-6">
+<section class="row map-page">
+
+	<aside class="col-sm-6">
 		<figure>
 			<%= image_tag @post.picture.url(:medium), class: "uploaded_pic" %>
 		</figure>
+	</aside>
+
+	<article class="col-sm-6">
+		<div id="map" data-id="<%= @post.id %>"></div>
 	</article>
 
 </section>

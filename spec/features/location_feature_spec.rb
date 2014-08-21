@@ -25,7 +25,7 @@ describe 'location feature' do
 
 		it 'you can click on the location to view a map' do
 			click_link 'London, UK'
-			expect(page).to have_content 'A brand new post posted from London, UK'
+			expect(page).to have_content 'A brand new post London, UK'
 		end
 
 		it 'you can see the map in the page', js: true do
