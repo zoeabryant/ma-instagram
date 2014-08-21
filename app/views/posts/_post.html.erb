@@ -9,7 +9,7 @@
 	</figure>
 
 	<figcaption>
-		<%= post.location %>
+		<%= link_to post.location, post_maps_path(post.id) %>
 	</figcaption>
 
 	<footer>

@@ -11,5 +11,12 @@ Tag.destroy_all
 10.times do |n|
 	tags = %w(#london #pretty #art #hipster #tbt #lovemybff).sample(2).join(', ')
 	name = %w(Arty London Pretty Wow Cute Me Totally).sample(2).join(' ')
-	Post.create(title: "#{name}", tag_list: tags, picture: File.new(Rails.root.join "spec/images/example_#{n}.jpg"))
+	location = %w(London Brussels NYC Ocean).sample(1).join
+	Post.create(
+		title: "#{name}",
+		location: "#{location}",
+		tag_list: tags,
+		picture: File.new(Rails.root.join "spec/images/example_#{n}.jpg"),
+
+	)
 end
