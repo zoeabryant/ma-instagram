@@ -1,1 +1,19 @@
 <h3><%= @post.title %> posted from <%= @post.location %></h3>
+
+<section class="row">
+
+	<article class="col-sm-6">
+		<div id="map"></div>
+	</article>
+
+	<article class="col-sm-6">
+		<figure>
+			<%= image_tag @post.picture.url(:medium), class: "uploaded_pic" %>
+		</figure>
+	</article>
+
+</section>
+
+<script type="text/javascript">
+  var post_location = "<%= @post.location %>";
+</script>
