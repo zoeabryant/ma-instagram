@@ -3,7 +3,7 @@
 <section class="row">
 
 	<article class="col-sm-6">
-		<div id="map"></div>
+		<div id="map" data-id="<%= @post.id %>"></div>
 	</article>
 
 	<article class="col-sm-6">
@@ -13,7 +13,3 @@
 	</article>
 
 </section>
-
-<script type="text/javascript">
-  var post_location = "<%= @post.location %>";
-</script>

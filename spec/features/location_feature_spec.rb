@@ -28,9 +28,9 @@ describe 'location feature' do
 			expect(page).to have_content 'A brand new post posted from London, UK'
 		end
 
-		it 'you can see the map in the page' do
+		it 'you can see the map in the page', js: true do
 			click_link 'London, UK'
-			expect(page).to have_css '#map'
+			expect(page).to have_css '#map .gm-style'
 		end
 	end
 
