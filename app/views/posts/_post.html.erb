@@ -1,14 +1,28 @@
 <article class="post col-xs-12 col-sm-4">
 
-	<h3><%= post.title %></h3>
-	<%= image_tag post.picture.url(:medium), class: "uploaded_pic" %>
+	<header>
+		<h3><%= post.title %></h3>
+	</header>
 
-	<% if post.tags.any? %>
-	<ul class="tags">
-		<% post.tags.each do |tag| %>
-		<li><%= link_to tag.text, tag %></li>
-		<% end %>
-	</ul>
+	<figure>
+		<%= image_tag post.picture.url(:medium), class: "uploaded_pic" %>
+	</figure>
+
+	<figcaption>
+		<%= post.location %>
+	</figcaption>
+
+	<footer>
+
+		<% if post.tags.any? %>
+		<ul class="tags">
+			<% post.tags.each do |tag| %>
+			<li><%= link_to tag.text, tag %></li>
+			<% end %>
+		</ul>
+
+	</footer>
+
 	<% end %>
 
 </article>
