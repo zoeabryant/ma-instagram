@@ -2,10 +2,13 @@ require 'rails_helper'
 
 describe 'tagging' do
 
+	let(:post_title)	{ 'A brand new post' }
+	let(:post_tags) 	{ '#french, #pretty' }
+
 	it 'displays tags as links under posts' do
 		visit '/posts/new'
-		fill_in 'Title', with: 'A brand new post'
-		fill_in 'Tags', with: '#french, #pretty'
+		fill_in 'Title', with: post_title
+		fill_in 'Tags', with: post_tags
 		click_button 'Create Post'
 
 		expect(page).to have_link '#french'
