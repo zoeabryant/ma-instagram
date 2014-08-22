@@ -20,6 +20,17 @@ describe 'location feature' do
 
 			expect(page).to have_content post_location
 		end
+
+		it 'can determine your location when making a new post', js:true do
+			visit '/posts/new'
+
+			click_button 'Get Location'
+
+			expect(page).to have_selector("input[value='25 City Road, London EC1Y 1AA, UK']")
+
+			# expect(page.evaluate_script("map.getCenter().lat()")).to be_within(0.05).of 51.5073509
+			# expect(page.evaluate_script("map.getCenter().lng()")).to be_within(0.05).of -0.1277582
+		end
 	end
 
 	context 'a post with a location' do

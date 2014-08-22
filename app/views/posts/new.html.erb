@@ -2,19 +2,30 @@
 
 	<article class="col-xs-6">
 	<%= form_for @post, html: { multipart: true } do |f| %>
-		<%= f.label :title %>
-		<%= f.text_field :title %>
+		<p>
+			<%= f.label :title %>
+			<%= f.text_field :title %>
+		</p>
 
-		<%= f.label :location %>
-		<%= f.text_field :location %>
+		<p>
+			<%= f.label :location %>
+			<%= f.text_field :location %>
+			<%= f.button 'Get Location', type: 'button', id: 'get_location' %>
+		</p>
 
-		<%= f.label :picture %>
-		<%= f.file_field :picture %>
+		<p>
+			<%= f.label :picture %>
+			<%= f.file_field :picture %>
+		</p>
 
-		<%= f.label :tag_list, 'Tags' %>
-		<%= f.text_field :tag_list %>
+		<p>
+			<%= f.label :tag_list, 'Tags' %>
+			<%= f.text_field :tag_list %>
+		</p>
 
-		<%= f.submit 'Create Post' %>
+		<p>
+			<%= f.submit 'Create Post' %>
+		</p>
 	<% end %>
 	</article>
 

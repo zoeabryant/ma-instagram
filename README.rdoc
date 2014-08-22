@@ -5,6 +5,7 @@ NEW POST
 	*- Detect Location
 	- figure out filters...
 	*- Actual form validation
+	*- Better tags: actual validation
 USERS
 	- Only users can post a post
 	- Only users can comment (add comment functionality)

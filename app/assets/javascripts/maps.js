@@ -13,8 +13,8 @@ $(document).ready(function(){
 				div: '#map',
 				width: '100%',
 				height: '500px',
-				lat: -12.043333,
-				lng: -77.028333
+				lat: 0,
+				lng: 0
 			});
 
 			GMaps.geocode({
@@ -22,6 +22,7 @@ $(document).ready(function(){
 				callback: function(results, status) {
 					if (status == 'OK') {
 						var latlng = results[0].geometry.location;
+
 						map.setCenter(latlng.lat(), latlng.lng());
 						map.addMarker({
 							lat: latlng.lat(),
