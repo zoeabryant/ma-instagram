@@ -10,7 +10,10 @@
 		<p>
 			<%= f.label :location %>
 			<%= f.text_field :location %>
-			<%= f.button 'Get Location', type: 'button', id: 'get_location' %>
+			<button id="get_location" name="button" type="button">
+				<span class="glyphicon glyphicon-map-marker"></span>
+				Get Location
+			</button>
 		</p>
 
 		<p>
@@ -30,6 +33,7 @@
 	</article>
 
 	<aside class="photo-area-container col-xs-6">
+		<h2 id="name_area"></h2>
 		<article id="photo_area"><span class="glyphicon glyphicon-camera"></span></article>
 	</aside>
 

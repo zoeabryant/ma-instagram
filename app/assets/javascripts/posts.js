@@ -16,7 +16,12 @@ function readURL(input) {
 	}
 }
 
+function updateLocation(val){
+	$('#post_location').val(val)
+}
+
 function getLocation() {
+	updateLocation('Determining Location...');
 	GMaps.geolocate({
 		success: function(position) {
 			lat = position.coords.latitude
@@ -25,10 +30,10 @@ function getLocation() {
 			getLocationName(lat, lng);
 		},
 		error: function(error) {
-			alert('Geolocation failed: '+error.message);
+			updateLocation('Geolocation failed: '+error.message);
 		},
 		not_supported: function() {
-			alert("Your browser does not support geolocation");
+			updateLocation("Your browser does not support geolocation");
 		}
 	});
 
@@ -42,9 +47,9 @@ function getLocationName(lat, lng){
 		callback: function(results, status) {
 			if (status == 'OK') {
 				var address = results[0].formatted_address
-				$('#post_location').val(address)
+				updateLocation(address)
 			} else {
-				alert('There was an error in finding your location, please enter manually')
+				updateLocation('There was an error in finding your location, please enter manually')
 			}
 		}
 	});
@@ -52,6 +57,7 @@ function getLocationName(lat, lng){
 
 $(document).ready(function(){
 	var fileField = $('#post_picture')
+	var titleField = $('#post_title')
 	var	locationButton = $('#get_location')
 
 	fileField.change(function(){

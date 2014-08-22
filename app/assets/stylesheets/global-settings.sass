@@ -15,6 +15,7 @@ body
 h1 strong
 	font-family: 'Pacifico', cursive
 
+
 main.wrapper
 	background: $teal
 	padding-top: 30px
@@ -35,3 +36,16 @@ main.wrapper
 		transform: rotate(0deg)
 	to
 		transform: rotate(360deg)
+
+
+@keyframes wiggle
+	0%
+		transform: rotate(0deg)
+	25%
+		transform: rotate(-10deg)
+	50%
+		transform: rotate(0deg)
+	75%
+		transform: rotate(10deg)
+	100%
+		transform: rotate(0deg)

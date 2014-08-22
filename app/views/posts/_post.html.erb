@@ -3,18 +3,19 @@
 	<header>
 		<h3>
 			<%= post.title %>
-			<small>
-				<%= link_to(post_maps_path(post.id)) do %>
-					<span class="glyphicon glyphicon-map-marker"></span>
-					<%= post.location %>
-				<% end %>
-			</small>
 		</h3>
 	</header>
 
 	<figure>
 		<%= image_tag post.picture.url(:medium), class: "uploaded_pic" %>
 	</figure>
+
+	<address>
+		<%= link_to(post_maps_path(post.id)) do %>
+			<span class="glyphicon glyphicon-map-marker"></span>
+			<%= post.location %>
+		<% end %>
+	</address>
 
 	<footer>
 
@@ -26,6 +27,7 @@
 		</ul>
 
 	</footer>
+
 
 	<% end %>
 
