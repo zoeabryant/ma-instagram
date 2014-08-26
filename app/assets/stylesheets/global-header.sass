@@ -15,23 +15,26 @@
 .global-nav
 	float: right
 	margin: 15px 5px 0 0
-	li a
-		padding: 10px 10px 20px 10px
-		width: 100%
-		display: block
-		line-height: 1
-		border-top-left-radius: 10px
-		border-top-right-radius: 10px
-
-		background: $purple
-		font-size: 1em
-		color: $white
-		text-align: center
-		span
-			font-size: 2.5em
+	li
+		display: inline-block
+		margin: 0
+		a
+			padding: 10px 10px 20px 10px
+			width: 100%
 			display: block
-		&:hover
-			text-decoration: none
-			margin-top: -5px
-			padding-bottom: 25px
-			transition: 0.1s ease-in-out
+			line-height: 1
+			border-top-left-radius: 10px
+			border-top-right-radius: 10px
+
+			background: $purple
+			font-size: 1em
+			color: $white
+			text-align: center
+			span
+				font-size: 2.5em
+				display: block
+			&:hover
+				text-decoration: none
+				padding-top: 20px
+				margin-top: -30px
+				transition: 0.1s ease-in-out

@@ -15,6 +15,10 @@ gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+gem 'devise'
+
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 group :production do
   gem 'rails_12factor'
 end
@@ -36,7 +40,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

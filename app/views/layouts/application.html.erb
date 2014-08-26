@@ -17,10 +17,20 @@
 					New Post
 				<% end %>
 			</li>
+			<li>
+				<%= link_to(new_user_registration_path, class: 'new-user') do %>
+					<span class="glyphicon glyphicon-heart"></span>
+					Sign Up
+				<% end %>
+			</li>
 		</ul>
 	</header>
 
 	<main class="wrapper container">
+
+	<!-- <p class="notice"><%= notice %></p> -->
+	<!-- <p class="alert"><%= alert %></p> -->
+
 
 		<%= yield %>
 
