@@ -26,19 +26,19 @@ describe 'location feature' do
 			expect(page).to have_content post_location
 		end
 
-		xit 'can determine your location when making a new post', js:true do
-			# I tried I swear! Must include JS dependencies in Poltergeist.
-			visit '/posts/new'
+		# xit 'can determine your location when making a new post', js:true do
+		# 	# I tried I swear! Must include JS dependencies in Poltergeist.
+		# 	visit '/posts/new'
 
-			click_button 'Get Location'
+		# 	click_button 'Get Location'
 
-			london_lat = '51.5073509'
-			london_lng = '-0.1277582'
+		# 	london_lat = '51.5073509'
+		# 	london_lng = '-0.1277582'
 
-			page.execute_script("getLocationName(#{london_lat}, #{london_lng})');")
+		# 	page.execute_script("getLocationName(#{london_lat}, #{london_lng})');")
 
-			expect(page).to have_selector("input[value='25 City Road, London EC1Y 1AA, UK']")
-		end
+		# 	expect(page).to have_selector("input[value='25 City Road, London EC1Y 1AA, UK']")
+		# end
 	end
 
 	context 'a post with a location' do
