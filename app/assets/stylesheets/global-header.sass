@@ -1,40 +1,49 @@
 @import "_colors"
 
 .global-header
+	height: 125px
+	position: relative
+	margin-bottom: -10px
 #logo
-	float: left
 	color: $purple
 	h1
-		font-size: 72px
+		font-size: 81px
 		line-height: 1
 		font-family: 'Pacifico', cursive
-		margin: 20px 0 0 0
+		display: inline-block
+		margin: 42px 0 0 0
 	&:hover
 		text-decoration: none
 
 .global-nav
-	float: right
-	margin: 15px 5px 0 0
+	position: absolute
+	bottom: 0
+	right: 20px
 	li
 		display: inline-block
 		margin: 0
 		a
-			padding: 10px 10px 20px 10px
+			padding: 10px
 			width: 100%
 			display: block
-			line-height: 1
+
 			border-top-left-radius: 10px
 			border-top-right-radius: 10px
 
 			background: $purple
-			font-size: 1em
-			color: $white
 			text-align: center
+
+			font-family: 'Pacifico', cursive
+			-webkit-font-smoothing: antialiased
+			line-height: 2
+			font-size: 1.2em
+			color: $white
 			span
-				font-size: 2.5em
+				font-size: 2em
 				display: block
 			&:hover
 				text-decoration: none
+
 				padding-top: 20px
-				margin-top: -30px
-				transition: 0.1s ease-in-out
+				transition: 0.2s ease
+				-webkit-transform: translateZ(0)

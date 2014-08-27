@@ -5,6 +5,11 @@ describe 'posts' do
 	let(:post_title)	{ 'A brand new post' }
 	let(:post_image)	{ Rails.root.join('spec/images/french_cat.gif') }
 
+	before do
+		zoe = create(:user)
+		sign_in(zoe)
+	end
+
 	context 'no posts' do
 	  it 'shows a message' do
 	  	visit '/posts'

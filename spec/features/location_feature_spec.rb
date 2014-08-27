@@ -6,6 +6,11 @@ describe 'location feature' do
 	let(:post_location) { 'London, UK' }
 	let(:post_image)	{ Rails.root.join('spec/images/french_cat.gif') }
 
+	before do
+		zoe = create(:user)
+		sign_in(zoe)
+	end
+
 	def add_post
 		visit '/posts/new'
 		fill_in 'Title', with: post_title

@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     resources :maps
   end
 
+  resources :users do
+    resource :post
+  end
+
   resources :tags
   # resources :charges
 

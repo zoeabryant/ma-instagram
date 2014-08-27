@@ -17,19 +17,46 @@
 					New Post
 				<% end %>
 			</li>
+
+			<% if user_signed_in? %>
+
+			<li>
+				<%= link_to(destroy_user_session_path, class: 'logout', method: :delete) do %>
+					<span class="glyphicon glyphicon-remove-circle"></span>
+					Sign Out
+				<% end %>
+			</li>
+
+			<% else %>
+
 			<li>
 				<%= link_to(new_user_registration_path, class: 'new-user') do %>
 					<span class="glyphicon glyphicon-heart"></span>
 					Sign Up
 				<% end %>
 			</li>
+			<li>
+				<%= link_to(user_session_path, class: 'login') do %>
+					<span class="glyphicon glyphicon-home"></span>
+					Sign In
+				<% end %>
+			</li>
+
+			<% end %>
+
 		</ul>
 	</header>
 
 	<main class="wrapper container">
 
-	<!-- <p class="notice"><%= notice %></p> -->
-	<!-- <p class="alert"><%= alert %></p> -->
+	<ul class="feedback">
+	<% if flash[:notice] %>
+		<li class="notice"><%= notice %></li>
+	<% end %>
+	<% if flash[:alert] %>
+		<li class="alert"><%= alert %></li>
+	<% end %>
+	</ul>
 
 
 		<%= yield %>
@@ -39,6 +66,10 @@
 		</section>
 
 	</main>
+
+	<footer class="global-footer container">
+		Copyright
+	</footer>
 
 
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>

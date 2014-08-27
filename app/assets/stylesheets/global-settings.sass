@@ -10,18 +10,37 @@ html
 
 body
 	background: $white
+	background: url(background.png)
 	height: 100%
+	font-family: 'Merriweather', serif
 
 h1 strong
 	font-family: 'Pacifico', cursive
 
+ul.feedback
+	display: inline
+	.alert
+		padding: 0px
+		margin-bottom: 5px
 
 main.wrapper
 	background: $teal
-	padding-top: 30px
+	padding: 30px
+	padding-top: 50px
 	border-top-left-radius: 20px
 	border-top-right-radius: 20px
 	min-height: 100%
+
+.global-footer
+	background: $purple
+	padding: 10px
+
+	line-height: 1
+	text-transform: lowercase
+	text-align: center
+	font-size: 1em
+	font-family: 'Special Elite', cursive
+	color: $white
 
 .load
 	display: none

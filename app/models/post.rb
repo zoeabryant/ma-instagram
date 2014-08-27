@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 
+	belongs_to :user
+
 	has_attached_file :picture,
 		styles: { medium: "500x500#" },
 		:storage => :s3,

@@ -6,6 +6,9 @@ describe 'tagging' do
 	let(:post_tags) 	{ '#french, #pretty' }
 
 	it 'displays tags as links under posts' do
+		zoe = create(:user)
+		sign_in(zoe)
+
 		visit '/posts/new'
 		fill_in 'Title', with: post_title
 		fill_in 'Tags', with: post_tags

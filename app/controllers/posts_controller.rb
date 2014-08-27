@@ -7,12 +7,12 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		before_action :authenticate_user!
 		@post = Post.new
 	end
 
 	def create
 		@post = Post.new(params[:post].permit(:title, :location, :picture, :tag_list))
+		@post.user = current_user
 		@post.save
 
 		redirect_to '/posts'

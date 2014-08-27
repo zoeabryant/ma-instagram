@@ -23,14 +23,34 @@ describe 'Users' do
 			visit '/posts'
 			click_link 'Sign Up'
 
-			fill_in 'Email', with: 'zoe@example.com'
+			fill_in 'Email', with: 'test@example.com'
 			fill_in 'Password', with: 'securepassword20'
 			fill_in 'Password confirmation', with: 'securepassword20'
 
 			click_button 'Sign up'
-			expect(page).to have_content 'Welcome zoe@example.com!'
+			expect(page).to have_content 'Welcome test@example.com!'
 		end
 
+	end
+
+	context 'Signing in' do
+		it 'users can sign in' do
+			zoe = create(:user)
+			sign_in(zoe)
+
+			expect(page).to have_content "Welcome #{zoe.email}!"
+		end
+	end
+
+	context 'Signing out' do
+		it 'allows a user to sign out' do
+			zoe = create(:user)
+			sign_in(zoe)
+
+			click_link 'Sign Out'
+
+			expect(page).not_to have_content "Welcome #{zoe.email}!"
+		end
 	end
 
 end
