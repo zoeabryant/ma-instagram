@@ -16,4 +16,4 @@ Project completed in week 9 of Makers Academy.
 * Users can view images with the same tags
 
 ##Try it
-[Heroku app temporarily down.](http://pipster.herokuapp.com/)
+[Look at the Heroku App](http://pipster.herokuapp.com/)
