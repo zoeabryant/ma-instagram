@@ -25,5 +25,7 @@ Project completed in week 9 of Makers Academy.
 
 [![Code Climate](https://codeclimate.com/repos/547335c169568034f4233528/badges/121410a4328d449c240b/gpa.svg)](https://codeclimate.com/repos/547335c169568034f4233528/feed)
 
+[simplecov](https://github.com/colszowka/simplecov) Test coverage: <font color='#009900'>**100%**</font>
+
 ##Try it
 [Look at the Heroku App](http://pipster.herokuapp.com/)
