@@ -1,6 +1,6 @@
 [![Code Climate](https://codeclimate.com/repos/547335c169568034f4233528/badges/121410a4328d449c240b/gpa.svg)](https://codeclimate.com/repos/547335c169568034f4233528/feed)
 
-##Instagram recreation: Makers Academy project week 9
+##Instagram recreation: week 9
 Recreate Instagram using Rails and Amazon S3 image uploads.
 Project completed in week 9 of Makers Academy.
 
@@ -21,7 +21,8 @@ Project completed in week 9 of Makers Academy.
 * Users can view images with the same tags
 
 ##Quality checks
-Preek smells generates total 9 in automatically generated migration files.
+(Reek)[https://github.com/joenas/preek] finds a total of 9 smells, but they are in automatically generated migration files, so no action taken.
+
 [![Code Climate](https://codeclimate.com/repos/547335c169568034f4233528/badges/121410a4328d449c240b/gpa.svg)](https://codeclimate.com/repos/547335c169568034f4233528/feed)
 
 ##Try it
